@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Giveaway System</title>
+  <link rel="stylesheet" href="/admin/style.css">
+  <script src="/admin/admin.js"></script>
+</head>
+<body>
+  <div class="card">
+    <div class="login-container">
+      <!-- Logo/Ikon -->
+      <div class="login-icon">
+        🔐
+      </div>
+      
+      <!-- Judul -->
+      <h2>Admin Panel</h2>
+      <p class="login-subtitle">
+        Masuk ke dashboard admin untuk mengelola giveaway
+      </p>
+      
+      <!-- Form Login -->
+      <div class="input-group">
+        <label for="name">
+          <span>👤</span> Nama Admin
+        </label>
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="Masukkan nama admin"
+          autocomplete="username"
+        >
+      </div>
+      
+      <div class="input-group">
+        <label for="password">
+          <span>🔒</span> Password
+        </label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Masukkan password"
+          autocomplete="current-password"
+        >
+      </div>
+      
+      <!-- Tombol Login -->
+      <button id="loginBtn">
+  <span>🚀</span> Masuk ke Dashboard
+</button>
+      
+      <!-- Pesan Error -->
+      <p id="msg" style="margin-top: 16px; text-align: center; color: #f87171; min-height: 24px;"></p>
+      
+      <!-- Footer -->
+      <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <small style="color: #6B7280;">
+          © 2024 Giveaway System | Admin Access Only
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Auto focus
+  document.getElementById("name").focus();
+
+  // Enter key
+  document.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      login();
+    }
+  });
+
+  // Klik tombol login
+  document.getElementById("loginBtn")
+    .addEventListener("click", login);
+
+});
+</script>
+</body>
+</html>
